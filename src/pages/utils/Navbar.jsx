@@ -10,7 +10,7 @@ export default function Navbar() {
                 <a href="/" className="sm:hidden xs:hidden xl:block btn btn-ghost normal-case text-xl">Rumah</a>
                 <div className="xl:hidden lg:hidden flex flex-col gap-y-2">
                     <input type="text" placeholder="Search dream residence..." className="input input-bordered w-full h-10 rounded-full" />
-                    <div className='flex items-center justify-center flex-row gap-x-1'>
+                    <div className='flex items-start justify-start flex-row gap-x-1'>
                         <HiLocationMarker size="16px" color="coral" />
                         <p className='text-xs text-zinc-500'>Keputih, Surabaya, East Java</p>
                     </div>

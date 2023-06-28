@@ -111,7 +111,7 @@ const HouseDetail = () => {
                           </div>
                           <div className='p-2 flex gap-x-1'>
                             <BiCar size="20px" color="gray" />
-                            <h5 className='text-zinc-900 font-light'>{house.bedroom}</h5>
+                            <h5 className='text-zinc-900 font-light'>{house.carport}</h5>
                           </div>
                           <div className='p-2 flex gap-x-1'>
                             <TbViewportWide size="20px" color="gray" />
