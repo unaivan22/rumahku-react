@@ -1,17 +1,23 @@
 import React from 'react'
 import { HiLocationMarker } from 'react-icons/hi';
+import { IoIosArrowBack } from 'react-icons/io';
 import { useHistory } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbarsub() {
     const history = useHistory();
 
   return (
     <div className="navbar sticky top-0 bg-base-100 py-4 border-b border-zinc-100">
         <div className='container flex justify-between'>
             <div className="navbar-">
-                <a onClick={() => history.push("/")} className="pointer sm:hidden xs:hidden xl:block font-semibold text-xl"><span className='text-zinc-900'>Rumah</span><span className='text-rose-500'>ku</span></a>
+                <a onClick={() => history.push("/")} className="pointer sm:hidden xs:hidden xl:block font-semibold text-xl"><span>Rumah</span><span className='text-rose-500'>ku</span></a>
                 <div className="xl:hidden lg:hidden flex flex-col gap-y-2">
-                    <input type="text" placeholder="Search dream residence..." className="placeholder:text-sm input input-bordered w-full h-10 rounded-full" />
+                    <div className='flex flex-row items-center gap-x-2'>
+                        <a onClick={() => history.push("/")} className="xl:hidden lg:hidden text-xinc-700 pointer">
+                            <IoIosArrowBack size={18} />
+                        </a>
+                        <input type="text" placeholder="Search dream residence..." className="placeholder:text-sm input input-bordered w-full h-10 rounded-full" />
+                    </div>
                     <div className='flex items-start justify-start flex-row gap-x-1'>
                         <HiLocationMarker size="16px" color="coral" />
                         <p className='text-xs text-zinc-500'>Keputih, Surabaya, East Java</p>
