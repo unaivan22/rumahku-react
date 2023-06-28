@@ -39,7 +39,8 @@ const HouseDetail = () => {
   }, [id]);
 
   if (house === null) {
-    return <div>Loading...</div>;
+    return console.log('Loading...') 
+    // <div>Loading...</div>;
   }
 
   const galleryImages = house.gallery.slice(0, 4);
@@ -69,23 +70,23 @@ const HouseDetail = () => {
               <div className='xl:col-span-6 sm:col-span-1'>
                 <h3 className='text-4xl font-bold text-zinc-700 mt-6'>Rp {house.price}</h3>
                 
-                <div className='flex gap-x-2 mb-12'>
+                <div className='flex gap-x-2 mb-8'>
                   <p className='text-md font-light text-zinc-700'>{house.kecamatan},</p>
                   <p className='text-md font-light text-zinc-700'>{house.kota}</p>
                 </div>
 
                 <div>
-                  <p>{house.description}</p>
+                  <p className='text-zinc-600 font-light'>{house.description}</p>
                 </div>
 
                 <div className='flex justify-between mb-2 mt-8 items-center'>
                   <h1 className='font-bold text-zinc-900 text-xl'>Gallery</h1>
-                  <a className='underline'>See All Gallery</a>
+                  <a className='underline pointer' onClick={()=>window.allGallery.showModal()}>See All Gallery</a>
                 </div>
                 <div className='grid grid-cols-4 gap-x-4'>
                   {galleryImages.map((image, index) => (
                     <div key={index}>
-                      <img className='rounded-xl h-[170px] object-cover w-full' src={image} alt={`House ${index + 1}`} />
+                      <img className='rounded-xl aspect-square object-cover w-full' src={image} alt={`House ${index + 1}`} />
                     </div>
                   ))}
                 </div >
@@ -94,7 +95,7 @@ const HouseDetail = () => {
               <div className='xl:col-span-3 sm:col-span-1'>
 
 
-                <li class="text-sm leading-6">
+                <div class="text-sm leading-6 mt-12">
                     <figure class=" flex flex-col-reverse bg-white border border-1 border-zinc-200 rounded-2xl p-6">
                         <blockquote class="mt-6 text-slate-600 space-y-2">
                             <p className='font-light'>Interested in this house? Let's contact the seller now.</p>
@@ -128,7 +129,7 @@ const HouseDetail = () => {
                         </figcaption>
                         
                     </figure>
-                </li>
+                </div>
 
 
               </div>
@@ -137,6 +138,23 @@ const HouseDetail = () => {
           </div>
         </section>
       </ZoomIn>
+
+      <dialog id="allGallery" className="modal">
+        <form method="dialog" className="modal-box gallery">
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          <h3 className="font-normal text-lg mb-4">All Gallery</h3>
+
+          <div className='columns-2 gap-4 space-y-4'>
+              {galleryImages.map((image, index) => (
+                <div key={index}>
+                  <img className='rounded-xl object-cover w-full' src={image} alt={`House ${index + 1}`} />
+                </div>
+              ))}
+            </div >
+        
+        </form>
+      </dialog>
+
     </Web>
   );
 };

@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="navbar sticky top-0 bg-base-100 py-4 border-b border-zinc-100">
         <div className='container flex justify-between'>
             <div className="navbar-">
-                <a href="/" className="sm:hidden xs:hidden xl:block btn btn-ghost normal-case text-xl">Rumah</a>
+                <a href="/" className="sm:hidden xs:hidden xl:block font-semibold text-xl">Rumah</a>
                 <div className="xl:hidden lg:hidden flex flex-col gap-y-2">
                     <input type="text" placeholder="Search dream residence..." className="input input-bordered w-full h-10 rounded-full" />
                     <div className='flex items-start justify-start flex-row gap-x-1'>
