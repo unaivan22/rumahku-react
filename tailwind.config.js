@@ -8,7 +8,7 @@ module.exports = {
       center: true,
     },
     screens: {
-      'xs': '400px',
+      'xs': '370px',
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
