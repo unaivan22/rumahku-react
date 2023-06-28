@@ -22,7 +22,7 @@ const HouseList = () => {
 
   return (
     <Web>
-        <div className='grid xl:grid-cols-4 gap-x-8 gap-y-12 my-12 container'>
+        <div className='grid xl:grid-cols-4 gap-x-8 gap-y-12 my-4 container'>
             {houses.map((house) => (
                 <Link to={`/house/${house.id}`} key={house.id} className='space-y-2'>
                     <img className='aspect-square object-cover rounded-xl' src={house.thumbnail} />

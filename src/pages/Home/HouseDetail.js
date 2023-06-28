@@ -64,9 +64,9 @@ const HouseDetail = () => {
               <GrFavorite size="42px" color="red" />
             </div>
 
-            <img className='aspect-video rounded-xl object-cover w-full h-[500px]' src={house.thumbnail} />
-            <div className='grid grid-cols-9 gap-x-12'>
-              <div className='col-span-6'>
+            <img className='aspect-video rounded-xl object-cover w-full xl:h-[500px] sm:aspect-square' src={house.thumbnail} />
+            <div className='grid xl:grid-cols-9 sm:grid-cols-2 gap-x-12'>
+              <div className='xl:col-span-6 sm:col-span-1'>
                 <h3 className='text-4xl font-bold text-zinc-700 mt-6'>Rp {house.price}</h3>
                 
                 <div className='flex gap-x-2 mb-12'>
@@ -91,7 +91,7 @@ const HouseDetail = () => {
                 </div >
               </div>
 
-              <div className='col-span-3'>
+              <div className='xl:col-span-3 sm:col-span-1'>
 
 
                 <li class="text-sm leading-6">
