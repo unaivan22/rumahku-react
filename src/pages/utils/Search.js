@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { IoCloseOutline } from 'react-icons/io5';
 import EaseIn from './EaseIn';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -44,7 +44,7 @@ const Search = () => {
         <section className='container'>
             <div className='mt-16'>
                 <a onClick={() => history.goBack()} className='pointer h-max-fit'>
-                    <AiOutlineCloseCircle size='32px' />
+                    <IoCloseOutline size='32px' color='#b4b4b4' />
                 </a>
                 <h1 className='text-4xl my-6'>Search</h1>
                 
