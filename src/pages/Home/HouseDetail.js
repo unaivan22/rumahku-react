@@ -59,7 +59,7 @@ const HouseDetail = () => {
 
             <div className='flex flex-row items-center justify-between gap-x-4 my-12'>
               <div className='flex flex-row items-center gap-x-4'>
-                <a onClick={() => history.push("/")} className="w-14 h-14 sm:hidden xs:hidden xl:inline-block rounded-full hover:cursor-pointer  bg-zinc-200 hover:bg-zinc-800 text-white text-center inline-flex items-center px-3 py-3  mr-2 mb-2">
+                <a onClick={() => history.goBack()} className="w-14 h-14 sm:hidden xs:hidden xl:inline-block rounded-full hover:cursor-pointer  bg-zinc-200 hover:bg-zinc-800 text-white text-center inline-flex items-center px-3 py-3  mr-2 mb-2">
                   <IoMdArrowRoundBack size={32} />
                 </a>
                 <h1 className='text-4xl font-bold text-zinc-900 xs:text-3xl'>{house.title}</h1>
