@@ -39,7 +39,7 @@ function Saved() {
             {rumah.map(rumahData => (
                 <Link to={`/house/${rumahData.id}`} key={rumahData.id} className='flex items-center gap-x-8 justify-between xl:mx-32 '>
                     <div className='flex gap-x-8 items-center'>
-                        <img className='aspect-square w-32 rounded-xl col-span-1' src={rumahData.thumbnail} /> 
+                        <img className='aspect-square w-32 rounded-xl col-span-1 object-cover' src={rumahData.thumbnail} /> 
                         <div className='flex flex-col col-span-6'>
                             <div className='text-xl font-bold text-zinc-800'>
                                 {rumahData.title}
