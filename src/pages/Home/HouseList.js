@@ -122,7 +122,7 @@ const HouseList = () => {
               <div className='grid xl:grid-cols-4 gap-x-8 gap-y-12 my-8 '>
                 {sortedData.map(house => (
                   <Link to={`/house/${house.id}`} key={house.id} className='space-y-2'>
-                  <img className='aspect-square object-cover rounded-xl' src={house.thumbnail} />
+                  <img className='aspect-square object-cover rounded-xl w-full' src={house.thumbnail} />
                   <div>
                       <h3 className='font-semibold text-lg'>{house.title}</h3>
                       <p className='font-light text-zinc-500'>Rp {house.price.toLocaleString('id-ID')}</p>
